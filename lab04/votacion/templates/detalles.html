@@ -1,0 +1,22 @@
+<h1>Datos del candidato {{ candidato.candidato_nombre }}</h1>
+
+{% if latest_datos_list %}
+    <ul>
+        {% for dato in latest_datos_list %}
+        <li>
+            Nombres/Apellidos : {{ dato.nombre_apellido }}
+        </li>
+        <li>
+            Partido : {{ dato.partido }}
+        </li>
+        <li>
+            Edad : {{ dato.edad }}
+        </li>   
+        <li>
+            Region : {{ region.region_nombre }}
+        </li>   
+        {% endfor %}
+    </ul>
+{% else %}
+    <p>No hay registros.</p>
+{% endif %}

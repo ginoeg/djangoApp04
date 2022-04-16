@@ -1,0 +1,13 @@
+<h1>Listado de Candidatos de {{ region.region_nombre }}</h1>
+
+{% if latest_candidatos_list %}
+    <ul>
+        {% for candidato in latest_candidatos_list %}
+        <li>
+            <a href="/votacion/{{ candidato.region_id }}/{{ candidato.id }}/detalles/">{{ candidato.nombre_apellido }}</a>
+        </li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <p>No hay registros.</p>
+{% endif %}
